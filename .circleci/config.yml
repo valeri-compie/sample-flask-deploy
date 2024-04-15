@@ -25,8 +25,11 @@ jobs:
     steps:
       # Replace this with steps to deploy to users
       - run:
+          name: install pip
+          command: 'python -m ensurepip --upgrade'
+      - run:
           name: install pipenv
-          command: 'pip3 install pipenv'
+          command: 'pip install pipenv'
       - run:
           name: activate environment
           command: 'pipenv shell'
