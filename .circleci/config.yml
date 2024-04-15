@@ -25,6 +25,9 @@ jobs:
     steps:
       # Replace this with steps to deploy to users
       - run:
+          name: activate environment
+          command: 'pipenv shell'
+      - run:
           name: deploy
           command: 'waitress-serve --listen=*:8000 core.app:app'
 workflows:
