@@ -21,12 +21,9 @@ jobs:
   deploy:
     # This is an example deploy job, not actually used by the workflow
     docker:
-      - image: cimg/base:stable
+      - image: cimg/python:3.11-node
     steps:
       # Replace this with steps to deploy to users
-      - run:
-          name: install pip
-          command: 'python -m ensurepip --upgrade'
       - run:
           name: install pipenv
           command: 'pip install pipenv'
